@@ -25,7 +25,7 @@ export const Filter = () => {
   return (
     <FilterContainer>
       <Title>Filter By:</Title>
-      <Form>
+      <Form aria-label="Filtering">
         <Label htmlFor="category">Categories</Label>
         <select id="category" value={category} onChange={handleChange}>
           {categories.map(({ id, name }) => (

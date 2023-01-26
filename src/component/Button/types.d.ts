@@ -1,6 +1,6 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, IntrinsicAttributes } from "react";
 
-export interface ButtonProps {
+export interface ButtonProps extends IntrinsicAttributes {
   color?: string;
   size?: "small" | "medium" | "large";
   variant?: "primary" | "secondary";

@@ -15,12 +15,14 @@ export const Sorting = () => {
   return (
     <SortingContainer>
       <Title>Sorting By:</Title>
-      <Form>
+      <Form aria-label="Sorting">
         <div>
           <input
             type="radio"
             id="name"
             name="sort"
+            title="sort by name"
+            aria-label="sort by name"
             value="name"
             onChange={handleChange}
             checked={sort === "name"}
@@ -33,6 +35,8 @@ export const Sorting = () => {
             id="price"
             name="sort"
             value="price"
+            title="sort by price"
+            aria-label="sort by price"
             onChange={handleChange}
             checked={sort === "price"}
           />

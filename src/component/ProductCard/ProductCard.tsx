@@ -24,7 +24,7 @@ export const ProductCard = ({
   return (
     <Card>
       <CardHeader>
-        <ImageBox>
+        <ImageBox role="img" aria-label="Product Card Image">
           <Image src={`${images[0]}`} alt={title} />
         </ImageBox>
       </CardHeader>

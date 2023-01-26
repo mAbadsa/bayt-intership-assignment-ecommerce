@@ -19,6 +19,8 @@ export const Button = ({
       size={size}
       style={{ ...style, color }}
       {...props}
+      tabIndex={0}
+      role="button"
     >
       {label}
     </StyledButton>

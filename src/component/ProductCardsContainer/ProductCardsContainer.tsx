@@ -23,6 +23,10 @@ export const ProductCardsContainer = ({
       return <ProductCard id={id} key={id} {...rest} />;
     }
   );
-  return <CardsContainer>{productsElems}</CardsContainer>;
+  return (
+    <CardsContainer aria-label="Products Card Container">
+      {productsElems}
+    </CardsContainer>
+  );
 };
 
