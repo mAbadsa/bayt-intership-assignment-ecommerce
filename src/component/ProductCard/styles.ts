@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../helpers/mediaQuery";
 
 export const Card = styled("div")`
   font-family: "Montserrat", Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -11,9 +12,20 @@ export const Card = styled("div")`
 
 export const CardHeader = styled("div")`
   overflow: hidden;
-  max-height: 120px;
+  max-height: 180px;
   border-top-left-radius: 0.375rem;
   border-top-right-radius: 0.375rem;
+  @media ${devices.laptop} {
+    max-height: 160px;
+  }
+
+  @media ${devices.tablet} {
+    max-height: 140px;
+  }
+
+  @media ${devices.mobileL} {
+    max-height: 200px;
+  }
 `;
 
 export const CardDetails = styled("div")`

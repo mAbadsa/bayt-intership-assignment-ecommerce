@@ -10,30 +10,30 @@ import { Products } from "../slices/type";
 // }
 
 const productsApi = createApi({
-  reducerPath: "productApi",
+  reducerPath: "productsApi",
   baseQuery: fetchBaseQuery({ baseUrl: "https://api.escuelajs.co/api/v1/" }),
-  tagTypes: ["product"],
+  tagTypes: ["products"],
   endpoints: (builder) => ({
     getProducts: builder.query<Products, object | void>({
       query: ({
         offset = 0,
-        limit = 6,
+        limit = 8,
         categoryId = 0,
       }: {
         offset: number;
         limit: number;
         categoryId: number;
       }) => `products?categoryId=${categoryId}&offset=${offset}&limit=${limit}`,
-      providesTags: ["product"],
+      providesTags: ["products"],
     }),
     getAllProducts: builder.query<Products, number | void>({
-      query: () => `products`,
-      providesTags: ["product"],
+      query: () => `products/`,
+      providesTags: ["products"],
     }),
     getFilteredProductsByCategory: builder.query<Products, number | void>({
-      query: (offset = 0, limit = 6, categoryId = 1) =>
+      query: (offset = 0, limit = 8, categoryId = 1) =>
         `products?categoryId=${categoryId}&offset=${offset}&limit=${limit}`,
-      providesTags: ["product"],
+      providesTags: ["products"],
     }),
   }),
 });
